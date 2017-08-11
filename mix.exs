@@ -5,8 +5,8 @@ defmodule DynamicEnv.Mixfile do
     [app: :dynamic_env,
      version: "0.1.0",
      elixir: "~> 1.4",
-     build_embedded: Mix.env == :prod,
-     start_permanent: Mix.env == :prod,
+     description: description(),
+     package: package(),
      deps: deps()]
   end
 
@@ -33,6 +33,16 @@ defmodule DynamicEnv.Mixfile do
     [
       {:aws, "~> 0.5.0"},
       {:env_config, "~> 0.1.0"}
+    ]
+  end
+
+  defp package do
+    [
+      name: :dynamic_env,
+      files: ["lib", "mix.exs", "README*", "LICENSE*", "config"],
+      maintainers: ["Skyler Parr"],
+      licenses: ["MIT"],
+      links: %{"GitHub" => "https://github.com/skylerparr/dynamic_env"}
     ]
   end
 end
