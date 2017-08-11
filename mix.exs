@@ -36,6 +36,14 @@ defmodule DynamicEnv.Mixfile do
     ]
   end
 
+  defp description do
+    """
+		This provides a way to store environment variables into AWS SSM keystore
+		backed by KMS encryption. Then you can invoke a function that will update
+		your environment variables without recompiling or restarting your application.
+    """
+  end
+
   defp package do
     [
       name: :dynamic_env,
