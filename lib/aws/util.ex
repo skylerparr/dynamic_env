@@ -1,5 +1,5 @@
 defmodule DynamicEnv.AWS.Util do
-  import Dynamic.AWS.Config
+  import DynamicEnv.AWS.Config
 
   def generate_kms_key_id(key_name) do
     key_id = config()
